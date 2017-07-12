@@ -9,6 +9,46 @@ A: We use constraint propagation in this case in order to reduce the number of s
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
 A: To solve the diagonal sudoku problem, we are adding a new constraint to our model, that are the diagonals rule of non-repeated numbers. Previously the constraints were only for columns, rows, and 3x3 squares. Now with this aditional constraint the propagation is done taking into consideration one more rule that has to consider before the reduction of the possible values for each box.
 
+## How to use
+
+Having a Sudoku like this:
+```
+. . . |. . . |8 . 6
+8 . . |. . . |. . .
+. 7 . |. 8 6 |3 . .
+------+------+------
+. . . |8 . . |. . .
+. . . |. . . |. 8 .
+. 8 . |5 . 9 |. . .
+------+------+------
+1 . 8 |. . . |. . .
+. . . |. . . |. . 8
+. . . |. . 8 |. 4 .
+```
+It should be written in a one-line string, and the function `solve()` can be used, and the response is a dictionary containing the key and value for every box of the sudoku. To print the solution you can use the `display()` function:
+```
+from solution import solve, display
+
+sudoku_grid = '......8.68.........7..863.....8............8..8.5.9...1.8..............8.....8.4.'
+sudoku_solved = solve(sudoku_grid)
+display(sudoku_solved)
+
+# Result
+2 3 4 |7 9 5 |8 1 6
+8 5 6 |1 3 2 |4 9 7
+9 7 1 |4 8 6 |3 2 5
+------+------+------
+3 9 2 |8 7 1 |5 6 4
+5 1 7 |6 4 3 |9 8 2
+4 8 2 |5 6 9 |7 3 1
+------+------+------
+1 4 8 |3 2 7 |6 5 9
+3 2 9 |6 5 4 |1 7 8
+7 6 5 |9 1 8 |2 4 3
+```
+
+## Project Details
+
 ### Install
 
 This project requires **Python 3**.
