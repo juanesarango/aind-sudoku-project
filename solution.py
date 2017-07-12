@@ -73,7 +73,7 @@ def grid_values(grid, wild_card='.'):
     assert len(grid) == 81, "The length of `grid` should be 81. A 9x9 sudoku."
     sudoku_dict = {}
     for index, letter in enumerate(grid):
-        sudoku_dict[boxes[index]] = letter if letter != wild_card else '.'
+        sudoku_dict[boxes[index]] = letter if letter != wild_card else '123456789'
     return sudoku_dict
 
 
