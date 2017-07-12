@@ -12,7 +12,7 @@ A: To solve the diagonal sudoku problem, we are adding a new constraint to our m
 ## How to use
 
 Having a Sudoku like this:
-```
+```python
 . . . |. . . |8 . 6
 8 . . |. . . |. . .
 . 7 . |. 8 6 |3 . .
@@ -26,7 +26,7 @@ Having a Sudoku like this:
 . . . |. . 8 |. 4 .
 ```
 It should be written in a one-line string, and the function `solve()` can be used, and the response is a dictionary containing the key and value for every box of the sudoku. To print the solution you can use the `display()` function:
-```
+```python
 from solution import solve, display
 
 sudoku_grid = '......8.68.........7..863.....8............8..8.5.9...1.8..............8.....8.4.'
